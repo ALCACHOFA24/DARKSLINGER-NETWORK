@@ -1,192 +1,145 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Damian CV - Página Principal</title>
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            min-height: 100vh;
-        }
-
-        /* Menú lateral */
-        nav {
-            width: 250px;
-            background-color: #111;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            transition: transform 0.3s ease;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-        }
-
-        nav.closed {
-            transform: translateX(-260px);
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 20px;
-        }
-
-        nav ul li {
-            margin: 20px 0;
-        }
-
-        nav ul li a {
-            color: #eee;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            display: block;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.2s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #333;
-        }
-
-        /* Botón hamburguesa */
-        #btn-menu {
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            background-color: #222;
-            border: none;
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 10px 15px;
-            border-radius: 5px;
-            z-index: 1100;
-            transition: background-color 0.3s ease;
-        }
-
-        #btn-menu:hover {
-            background-color: #444;
-        }
-
-        /* Contenedor principal para contenido (al lado del menú) */
-        main {
-            margin-left: 250px;
-            padding: 20px;
-            flex-grow: 1;
-            transition: margin-left 0.3s ease;
-        }
-
-        nav.closed + main {
-            margin-left: 0;
-        }
-
-        /* Banner */
-        .banner {
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            margin-bottom: 40px;
-            box-shadow: 0 0 15px #3b82f6;
-        }
-
-        .banner h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        /* Sección contador suscriptores */
-        .subscriber-count {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                transform: translateX(-260px);
-                position: fixed;
-                z-index: 1000;
-            }
-
-            nav.open {
-                transform: translateX(0);
-            }
-
-            main {
-                margin-left: 0;
-            }
-        }
-    </style>
+    <title>Inicio - Damian CV</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-
-    <!-- Botón hamburguesa -->
     <button id="btn-menu">&#9776;</button>
-
-    <!-- Menú lateral -->
     <nav id="menu" class="closed">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="exclusivo.html">Contenido Exclusivo</a></li>
         </ul>
     </nav>
-
-    <!-- Contenido principal -->
     <main>
-        <section class="banner">
-            <h1>Bienvenido a Damian CV</h1>
-            <p>Tu espacio de gaming, desarrollo y contenido random.</p>
-        </section>
-
-        <section class="subscriber-count">
-            <iframe
-                src="https://livecounts.xyz/embed-customized/youtube-live-subscriber-count/UCTwjthfOiRJ1TC29lXTjxaQ"
-                frameborder="0"
-                width="300"
-                height="80"
-                style="border:0;"
-                title="Contador Suscriptores YouTube"
-                scrolling="no"
-            ></iframe>
-        </section>
-
-        <!-- Aquí agregas más contenido -->
-
+        <h1>Bienvenido a Damian CV</h1>
+        <p>Este es el sitio oficial de Damian CV. Explora mis proyectos, blogs y contenido exclusivo.</p>
     </main>
-
-    <script>
-        const btnMenu = document.getElementById('btn-menu');
-        const menu = document.getElementById('menu');
-
-        btnMenu.addEventListener('click', () => {
-            if (menu.classList.contains('closed')) {
-                menu.classList.remove('closed');
-                menu.classList.add('open');
-            } else {
-                menu.classList.add('closed');
-                menu.classList.remove('open');
-            }
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
+<!-- proyectos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyectos - Damian CV</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <button id="btn-menu">&#9776;</button>
+    <nav id="menu" class="closed">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html" class="active">Proyectos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="exclusivo.html">Contenido Exclusivo</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Mis Proyectos</h1>
+        <p>Aquí puedes ver los proyectos en los que he trabajado y colaborado.</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- blog.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog - Damian CV</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <button id="btn-menu">&#9776;</button>
+    <nav id="menu" class="closed">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="exclusivo.html">Contenido Exclusivo</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Blog</h1>
+        <p>Publicaciones, tutoriales y recursos para creadores.</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- contacto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto - Damian CV</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <button id="btn-menu">&#9776;</button>
+    <nav id="menu" class="closed">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+            <li><a href="exclusivo.html">Contenido Exclusivo</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Contacto</h1>
+        <p>Correo: contacto@electrumcdmx.com</p>
+        <p>Instagram: @damian_cv</p>
+        <p>TikTok: @damian_cv</p>
+        <p>X (Twitter): @damian_cv</p>
+        <p>YouTube: Damian CV</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- exclusivo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contenido Exclusivo - Damian CV</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <button id="btn-menu">&#9776;</button>
+    <nav id="menu" class="closed">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="exclusivo.html" class="active">Contenido Exclusivo</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Contenido Exclusivo</h1>
+        <p>Este contenido está disponible solo para usuarios registrados. ¡Regístrate para más!</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- estilos.css y script.js se mantienen como archivos comunes compartidos -->
