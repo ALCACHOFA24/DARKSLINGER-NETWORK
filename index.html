@@ -1,187 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DARKESLINGER NETWORK| Blog</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damian CV</title>
+    
+    <!-- AOS ANIMACIONES -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Bootstrap (opcional pero recomendado para estilos rápidos) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* Botón hamburguesa */
-    #menu-toggle {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      width: 30px;
-      height: 22px;
-      z-index: 1100;
-      cursor: pointer;
-    }
-
-    #menu-toggle span {
-      display: block;
-      height: 4px;
-      background: #fff;
-      margin: 4px 0;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    #menu-toggle.active span:nth-child(1) {
-      transform: translateY(9px) rotate(45deg);
-    }
-
-    #menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    #menu-toggle.active span:nth-child(3) {
-      transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* Sidebar */
-    #sidebar {
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100%;
-      background: #111;
-      padding-top: 60px;
-      transition: left 0.3s ease;
-      z-index: 1101;
-    }
-
-    #sidebar.show {
-      left: 0;
-    }
-
-    #sidebar a {
-      display: block;
-      padding: 15px 20px;
-      color: #fff;
-      text-decoration: none;
-      border-bottom: 1px solid #333;
-      transition: background 0.3s;
-    }
-
-    #sidebar a:hover {
-      background: #333;
-    }
-
-    /* Overlay */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease;
-    }
-
-    .overlay.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* Contenido principal */
-    .content {
-      padding: 60px 20px 20px 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00ffc8;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    /* Responsive mejora */
-    @media (max-width: 768px) {
-      #sidebar {
-        width: 200px;
-      }
-    }
-  </style>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .hero {
+            background: #111;
+        }
+        iframe {
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Botón hamburguesa -->
-  <div id="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero text-center py-5" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Bienvenido a Damian CV</h1>
+            <p class="lead">Gaming, proyectos y contenido que no ves en ningún otro canal.</p>
+            <a href="#proyectos" class="btn btn-outline-light mt-3">Explorar proyectos</a>
+        </div>
+    </section>
 
-  <!-- Sidebar -->
-  <div id="sidebar">
-    <a href="#inicio">Inicio</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#blog">Blog</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#exclusivo">Contenido Exclusivo</a>
-  </div>
-
-  <!-- Overlay -->
-  <div id="overlay" class="overlay"></div>
-
-  <!-- Contenido principal -->
-  <div class="content">
-    <h1>Bienvenido a Damian CV</h1>
-    <div class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5" style="background: linear-gradient(124deg, rgb(255,0,0), rgba(0,0,0,0) 35%, rgba(0,0,0,0) 66%, rgb(55,99,244) 100%), url('assets/img/damia_ncv_327027377_1295962317985737_8934850175582067060_n.jpg') center / cover; height: 500px; color: #ffffff;">
-    <div class="row">
-        <div class="col-md-10 col-xl-8 text-center d-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
-            <div>
-                <h1 class="text-uppercase fw-bold mb-3" style="color: rgb(0,0,0); background: linear-gradient(153deg, #3763f4, #ff0000), #23ff00; border-radius: 50px; font-size: 39.88px; font-weight: bold; text-align: center;">
-                    Hola! Me llamo "Damian CV"
-                </h1>
-                <p class="mb-4" style="color: rgb(255,255,255); font-size: 18px; text-align: center;">
-                    👋-Hola! Me llamo "Damian CV", subo contenido, (o algún otro juego si se me ocurre) intentando hacerlos reír con mi forma de ser.
-                </p>
+    <!-- CONTADOR DE SUSCRIPTORES DE YOUTUBE -->
+    <section class="py-5" data-aos="fade-up" data-aos-delay="300">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-auto text-center">
+                <h5 class="mb-3">Suscriptores en tiempo real</h5>
+                <iframe height="80px" width="300px" frameborder="0"
+                    src="https://livecounts.xyz/embed-customized/youtube-live-subscriber-count/UCTwjthfOiRJ1TC29lXTjxaQ?backgroundColor=000000&textColor=FFFFFF&labelColor=FFFFFF&countColor=FF0000"
+                    style="border: 0; width:300px; height:80px;"></iframe>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-  </div>
-
-  <!-- JavaScript -->
-  <script>
-    const toggleBtn = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.add('show');
-      overlay.classList.add('show');
-      toggleBtn.classList.add('active');
-    });
-
-    overlay.addEventListener('click', () => {
-      sidebar.classList.remove('show');
-      overlay.classList.remove('show');
-      toggleBtn.classList.remove('active');
-    });
-  </script>
-
+    <!-- AOS + BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
