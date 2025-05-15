@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog - Damian CV</title>
+    <style>
+        /* Mismos estilos base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; min-height: 100vh; }
+        nav { width: 250px; background-color: #111; position: fixed; height: 100vh; overflow-y: auto; transition: transform 0.3s ease; z-index: 1000; left: 0; top: 0; }
+        nav.closed { transform: translateX(-260px); }
+        nav ul { list-style: none; padding: 20px; }
+        nav ul li { margin: 20px 0; }
+        nav ul li a { color: #eee; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: block; padding: 10px 15px; border-radius: 5px; transition: background-color 0.2s ease; }
+        nav ul li a:hover, nav ul li a.active { background-color: #3b82f6; }
+        #btn-menu { position: fixed; top: 15px; left: 15px; background-color: #222; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; padding: 10px 15px; border-radius: 5px; z-index: 1100; transition: background-color 0.3s ease; }
+        #btn-menu:hover { background-color: #444; }
+        main { margin-left: 250px; padding: 20px; flex-grow: 1; transition: margin-left 0.3s ease; }
+        nav.closed + main { margin-left: 0; }
+        @media (max-width: 768px) {
+            nav { transform: translateX(-260px); position: fixed; z-index: 1000; }
+            nav.open { transform: translateX(0); }
+            main { margin-left: 0; }
+        }
+        .entrada {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .entrada h3 {
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn-menu">&#9776;</button>
+
+<nav id="menu" class="closed">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="exclusivo.html">Contenido Exclusivo</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Blog</h1>
+    <div class="entrada">
+        <h3>Título de entrada 1</h3>
+        <p>Contenido o resumen de la entrada del blog.</p>
+    </div>
+    <div class="entrada">
+        <h3>Título de entrada 2</h3>
+        <p>Contenido o resumen de la entrada del blog.</p>
+    </div>
+    <!-- Más entradas -->
+</main>
+
+<script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menu = document.getElementById('menu');
+    btnMenu.addEventListener('click', () => {
+        if (menu.classList.contains('closed')) {
+            menu.classList.remove('closed');
+            menu.classList.add('open');
+        } else {
+            menu.classList.add('closed');
+            menu.classList.remove('open');
+        }
+    });
+</script>
+
+</body>
+</html>
