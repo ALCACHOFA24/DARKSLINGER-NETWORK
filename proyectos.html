@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Proyectos - Damian CV</title>
+<style>
+    /* Mismos estilos de antes para menú y diseño */
+    /* ... Puedes copiar y pegar el mismo CSS del index.html para no repetir aquí */
+    /* Agrega sólo estilos específicos para proyectos */
+    .project {
+        background: #222;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #1e40af;
+    }
+    .project h3 {
+        margin-bottom: 10px;
+        color: #3b82f6;
+    }
+    .project p {
+        opacity: 0.8;
+    }
+</style>
+</head>
+<body>
+
+<button id="btn-menu">&#9776;</button>
+
+<nav id="menu" class="closed">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html" class="active">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="exclusivo.html">Contenido Exclusivo</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Proyectos Destacados</h1>
+
+    <div class="project">
+        <h3>Proyecto 1 - Juego XYZ</h3>
+        <p>Un juego innovador que desarrollé usando Unity y C#.</p>
+    </div>
+
+    <div class="project">
+        <h3>Proyecto 2 - App de Chat</h3>
+        <p>Aplicación móvil para chat en tiempo real con autenticación segura.</p>
+    </div>
+
+    <div class="project">
+        <h3>Proyecto 3 - Canal de YouTube</h3>
+        <p>Gestión de contenido y crecimiento de la comunidad en mi canal "Damian CV".</p>
+    </div>
+</main>
+
+<script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menu = document.getElementById('menu');
+    btnMenu.addEventListener('click', () => {
+        if(menu.classList.contains('closed')){
+            menu.classList.remove('closed');
+            menu.classList.add('open');
+        } else {
+            menu.classList.add('closed');
+            menu.classList.remove('open');
+        }
+    });
+</script>
+
+</body>
+</html>
