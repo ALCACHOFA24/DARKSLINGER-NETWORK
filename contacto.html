@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto - Damian CV</title>
+    <style>
+        /* Mismos estilos base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; min-height: 100vh; }
+        nav { width: 250px; background-color: #111; position: fixed; height: 100vh; overflow-y: auto; transition: transform 0.3s ease; z-index: 1000; left: 0; top: 0; }
+        nav.closed { transform: translateX(-260px); }
+        nav ul { list-style: none; padding: 20px; }
+        nav ul li { margin: 20px 0; }
+        nav ul li a { color: #eee; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: block; padding: 10px 15px; border-radius: 5px; transition: background-color 0.2s ease; }
+        nav ul li a:hover, nav ul li a.active { background-color: #3b82f6; }
+        #btn-menu { position: fixed; top: 15px; left: 15px; background-color: #222; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; padding: 10px 15px; border-radius: 5px; z-index: 1100; transition: background-color 0.3s ease; }
+        #btn-menu:hover { background-color: #444; }
+        main { margin-left: 250px; padding: 20px; flex-grow: 1; transition: margin-left 0.3s ease; }
+        nav.closed + main { margin-left: 0; }
+        @media (max-width: 768px) {
+            nav { transform: translateX(-260px); position: fixed; z-index: 1000; }
+            nav.open { transform: translateX(0); }
+            main { margin-left: 0; }
+        }
+        .contacto-info {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .contacto-info h3 {
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        .contacto-info a {
+            color: #7abaff;
+            text-decoration: none;
+        }
+        .contacto-info a:hover {
+            text-decoration: underline;
+        }
+        .redes {
+            margin-top: 15px;
+        }
+        .redes a {
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: #7abaff;
+            text-decoration: none;
+        }
+        .redes a:hover {
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn-menu">&#9776;</button>
+
+<nav id="menu" class="closed">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+        <li><a href="exclusivo.html">Contenido Exclusivo</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Contacto</h1>
+    <div class="contacto-info">
+        <h3>Correo personal de empresa</h3>
+        <p><a href="mailto:damian@tuempresa.com">damian@tuempresa.com</a></p>
+
+        <h3>Redes sociales</h3>
+        <div class="redes">
+            <a href="https://www.tiktok.com/@tuusuario" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+            <a href="https://www.instagram.com/tuusuario" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+            <a href="https://twitter.com/tuusuario" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X</a>
+            <a href="https://www.facebook.com/tuusuario" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+            <a href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.youtube.com/c/tuusuario" target="_
