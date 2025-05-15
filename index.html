@@ -1,46 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nombre de la Sección | Damian CV</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Damian CV</title>
   <style>
-    body { background: linear-gradient(to bottom right, #011627, #001b2e); color: #f0f4f8; }
-    nav, footer { background-color: #012A4A; }
-    a:hover { color: #00B4D8; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    header {
+      background: linear-gradient(to right, red, blue);
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      background: black;
+      color: red;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    .subtext {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    section {
+      padding: 100px 20px;
+      scroll-margin-top: 120px;
+      border-bottom: 1px solid #333;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #00ffff;
+    }
   </style>
 </head>
 <body>
-  <nav class="p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-white">Damian CV</h1>
-    <ul class="flex gap-4 flex-wrap text-blue-200">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="presentacion.html">Presentación</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="actualizaciones.html">Actualizaciones</a></li>
-      <li><a href="comentarios.html">Comentarios</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="exclusivo.html">Exclusivo</a></li>
-      <li><a href="tienda.html">Tienda</a></li>
-      <li><a href="acerca.html">Acerca de mí</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+
+  <!-- Banner principal -->
+  <header>
+    <h1>HOLA! ME LLAMO "DAMIAN CV"</h1>
+    <p class="subtext">🔥¡Hola! Me llamo "Damian CV", subo contenido (o algún otro juego si se me ocurre)<br>
+    intentando hacerlos reír con mi forma de ser.</p>
+  </header>
+
+  <!-- Menú debajo del banner -->
+  <nav>
+    <a href="#video">Videos</a>
+    <a href="#juegos">Juegos</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#colaboraciones">Colaboraciones</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 
-  <main class="p-10 text-center">
-    <h2 class="text-3xl font-semibold">Título de la Sección</h2>
-    <p class="mt-4">Contenido específico para esta sección.</p>
-  </main>
+  <!-- Secciones -->
+  <section id="video">
+    <h2>Videos</h2>
+    <p>Aquí irá una galería de tus videos, o un iframe de YouTube.</p>
+  </section>
 
-  <footer class="p-4 text-center text-blue-300">
-    <p>Sígueme en redes sociales:</p>
-    <div class="flex justify-center gap-4 mt-2">
-      <a href="https://www.youtube.com/@DamianCV">YouTube</a>
-      <a href="https://www.instagram.com/damian.cv/">Instagram</a>
-      <a href="https://www.tiktok.com/@damian.cv">TikTok</a>
-      <a href="https://twitter.com/DamianCV_">Twitter</a>
-    </div>
-  </footer>
+  <section id="juegos">
+    <h2>Juegos</h2>
+    <p>Contenido sobre juegos, tops, análisis o recomendaciones.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <p>Proyectos en los que has trabajado: páginas, apps, bots, etc.</p>
+  </section>
+
+  <section id="colaboraciones">
+    <h2>Colaboraciones</h2>
+    <p>Contenido hecho con otros youtubers o streamers.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Formulario o tus redes sociales para que te escriban.</p>
+  </section>
+
 </body>
 </html>
