@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Damian CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damian CV | Blog</title>
   <style>
     * {
       margin: 0;
@@ -10,113 +11,163 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: sans-serif;
-      background-color: black;
-      color: white;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      overflow-x: hidden;
     }
 
-    header {
-      background: linear-gradient(to right, red, blue);
-      text-align: center;
-      padding: 50px 20px;
-      border-radius: 0 0 20px 20px;
+    /* Botón hamburguesa */
+    #menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 30px;
+      height: 22px;
+      z-index: 1100;
+      cursor: pointer;
     }
 
-    header h1 {
-      font-size: 2.5em;
-      background: black;
-      color: red;
-      padding: 10px 20px;
-      border-radius: 20px;
-      display: inline-block;
+    #menu-toggle span {
+      display: block;
+      height: 4px;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
     }
 
-    .subtext {
-      margin-top: 10px;
-      font-size: 1.2em;
+    #menu-toggle.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
     }
 
-    nav {
-      background-color: #111;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
+    #menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #menu-toggle.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Sidebar */
+    #sidebar {
+      position: fixed;
       top: 0;
-      z-index: 100;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #111;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 1101;
     }
 
-    nav a {
-      color: white;
+    #sidebar.show {
+      left: 0;
+    }
+
+    #sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
       text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: red;
-    }
-
-    section {
-      padding: 100px 20px;
-      scroll-margin-top: 120px;
       border-bottom: 1px solid #333;
+      transition: background 0.3s;
     }
 
-    section h2 {
+    #sidebar a:hover {
+      background: #333;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+
+    .overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Contenido principal */
+    .content {
+      padding: 60px 20px 20px 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
       margin-bottom: 20px;
-      color: #00ffff;
+      color: #00ffc8;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    /* Responsive mejora */
+    @media (max-width: 768px) {
+      #sidebar {
+        width: 200px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Banner principal -->
-  <header>
-    <h1>HOLA! ME LLAMO "DAMIAN CV"</h1>
-    <p class="subtext">🔥¡Hola! Me llamo "Damian CV", subo contenido (o algún otro juego si se me ocurre)<br>
-    intentando hacerlos reír con mi forma de ser.</p>
-  </header>
+  <!-- Botón hamburguesa -->
+  <div id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-  <!-- Menú debajo del banner -->
-  <nav>
-    <a href="#video">Videos</a>
-    <a href="#juegos">Juegos</a>
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <a href="#inicio">Inicio</a>
     <a href="#proyectos">Proyectos</a>
-    <a href="#colaboraciones">Colaboraciones</a>
+    <a href="#blog">Blog</a>
     <a href="#contacto">Contacto</a>
-  </nav>
+    <a href="#exclusivo">Contenido Exclusivo</a>
+  </div>
 
-  <!-- Secciones -->
-  <section id="video">
-    <h2>Videos</h2>
-    <p>Aquí irá una galería de tus videos, o un iframe de YouTube.</p>
-  </section>
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
 
-  <section id="juegos">
-    <h2>Juegos</h2>
-    <p>Contenido sobre juegos, tops, análisis o recomendaciones.</p>
-  </section>
+  <!-- Contenido principal -->
+  <div class="content">
+    <h1>Bienvenido a Damian CV</h1>
+    <p>Este es tu blog personal, donde compartes proyectos, actualizaciones y contenido exclusivo para tu comunidad.</p>
+  </div>
 
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <p>Proyectos en los que has trabajado: páginas, apps, bots, etc.</p>
-  </section>
+  <!-- JavaScript -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
 
-  <section id="colaboraciones">
-    <h2>Colaboraciones</h2>
-    <p>Contenido hecho con otros youtubers o streamers.</p>
-  </section>
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.add('show');
+      overlay.classList.add('show');
+      toggleBtn.classList.add('active');
+    });
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Formulario o tus redes sociales para que te escriban.</p>
-  </section>
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('show');
+      overlay.classList.remove('show');
+      toggleBtn.classList.remove('active');
+    });
+  </script>
 
 </body>
 </html>
