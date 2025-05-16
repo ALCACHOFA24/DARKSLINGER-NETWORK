@@ -1,183 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Damian CV</title>
-
-  <!-- Iconos y favicon -->
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/732/732200.png" />
-  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/732/732200.png" />
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
-  <!-- Iconos de Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  
-  <!-- Estilos personalizados -->
   <style>
-    /* Estilo para el fondo con imagen y gradiente */
-    #fondo {
-      background-image: linear-gradient(rgba(248, 9, 9, 0.62), rgba(14, 17, 247, 0.53)),
-        url("https://cdn.discordapp.com/attachments/968856020503799346/1130745150915370576/14661444.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+    /* Fondo negro para toda la página */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
       color: white;
-      text-align: center;
-      padding: 3rem 1rem;
-      border-radius: 10px;
     }
 
-    /* Botón personalizado rojo */
-    #btnrojo {
-      background-color: red;
-      color: white;
-      border-radius: 5px;
-      padding: 8px 15px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    #btnrojo:hover {
-      background-color: darkred;
-      color: white;
-      text-decoration: none;
-    }
-
-    /* Sección tienda */
-    #tienda {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-    }
-
-    /* Estilos para el footer */
-    footer {
-      background-color: #111;
-      color: #888;
-      padding: 1rem 0;
+    /* Contenedor principal centrado */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
       text-align: center;
     }
 
-    footer a {
-      color: #888;
+    /* Estilo del nombre grande */
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      color: #ff3cac; /* rosa neón */
+    }
+
+    /* Subtítulo */
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #00f0ff; /* celeste neón */
+    }
+
+    /* Botones de redes sociales */
+    .socials a {
       margin: 0 10px;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #ff3cac, #784ba0, #2b86c5);
+      color: white;
       text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
     }
 
-    footer a:hover {
-      color: white;
+    .socials a:hover {
+      transform: scale(1.1); /* efecto al pasar el mouse */
+    }
+
+    /* Sección de contacto */
+    .contact {
+      margin-top: 50px;
+      font-size: 1rem;
+      color: #ccc;
     }
   </style>
 </head>
-
 <body>
-  <!-- Navegación principal -->
-  <nav class="navbar navbar-dark bg-dark rounded-5 mb-3 px-2">
-    <div class="container-fluid">
-      <!-- Botón con nombre -->
-      <a href="#" id="btnrojo" class="navbar-brand fw-bold">Damian CV</a>
+  <div class="container">
+    <!-- Título principal -->
+    <h1>Damian CV</h1>
 
-      <!-- Enlaces sociales y tienda -->
-      <div class="d-flex gap-3">
-        <!-- Redes sociales -->
-        <a href="https://www.instagram.com/dark_slinger_/" target="_blank" class="btn btn-dark" aria-label="Instagram">
-          <i class="bi bi-instagram" style="color: #f73e20;"></i>
-        </a>
-        <a href="https://twitter.com/DarkSlingerNET" target="_blank" class="btn btn-dark" aria-label="Twitter">
-          <i class="bi bi-twitter" style="color: #0dcaf0;"></i>
-        </a>
-        <a href="https://www.youtube.com/@Damian_cv" target="_blank" class="btn btn-dark" aria-label="YouTube">
-          <i class="bi bi-youtube" style="color: red;"></i>
-        </a>
-        <a href="https://discord.gg/7GVRFb4HMD" target="_blank" class="btn btn-dark" aria-label="Discord">
-          <i class="bi bi-discord" style="color: #7289da;"></i>
-        </a>
-        <a href="https://www.tiktok.com/@dark_slinger" target="_blank" class="btn btn-dark" aria-label="TikTok">
-          <i class="bi bi-tiktok" style="color: black;"></i>
-        </a>
+    <!-- Subtítulo -->
+    <h2>¡Creando contenido que vibra!</h2>
 
-        <!-- Botón tienda -->
-        <a href="#tienda" class="btn btn-outline-danger">Tienda</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Sección principal con imagen y texto -->
-  <div id="fondo" class="container mb-5">
-    <h1 class="display-1 text-center fw-bold text-shadow" style="font-family: 'Arial Black', Arial, sans-serif;">
-      DARKSLINGER NETWORK
-    </h1>
-    <p class="fs-5 text-center mb-4">
-      ¡Holaaa! Bienvenido a DARKSLINGER NETWORK, soy un creador digital obsesionado con el diseño, el código y la tecnología:
-      desde videos hasta robots...
-    </p>
-
-    <!-- Contador en vivo de suscriptores de YouTube -->
-    <div class="mb-3" style="font-size: 1.5rem;">
-      <iframe src="https://www.livecounts.xyz/count/damian_cv"
-        style="border-radius: 15px;" width="400" height="50" scrolling="no" frameborder="0"></iframe>
+    <!-- Botones de redes sociales -->
+    <div class="socials">
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
     </div>
 
-    <!-- Video incrustado de YouTube -->
-    <div class="ratio ratio-16x9 mb-4" style="border-radius: 15px; overflow: hidden;">
-      <iframe src="https://www.youtube.com/embed/owvxVFLXVu0" title="YouTube video player" allowfullscreen></iframe>
-    </div>
-
-    <!-- Publicación de Instagram embebida -->
-    <div class="ratio ratio-16x9" style="border-radius: 15px; overflow: hidden;">
-      <iframe src="https://www.instagram.com/p/Cv4xrUyt1Ys/embed/?cr=1&v=14&wp=800&rd=https%3A%2F%2Fwww.instagram.com&rp=%2F" style="border:none" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Publicación Instagram" ></iframe>
+    <!-- Información de contacto -->
+    <div class="contact">
+      <p>Contacto: damian@email.com</p>
     </div>
   </div>
-
-  <!-- Sección tienda -->
-  <section id="tienda" class="container">
-    <h2 class="mb-4 fw-bold">Tienda de productos</h2>
-    <a href="https://my-store-e86371.creator-spring.com" target="_blank" class="btn btn-danger mb-3">Visitar Tienda</a>
-    <iframe src="https://my-store-e86371.creator-spring.com" style="border-radius: 15px;" width="100%" height="700" frameborder="0" scrolling="no"></iframe>
-  </section>
-
-  <!-- Sección contacto -->
-  <section class="container my-5">
-    <h2 class="mb-4 fw-bold">Contacto</h2>
-
-    <!-- Contacto email visible -->
-    <div class="d-flex gap-5">
-      <div>
-        <h5><i class="bi bi-envelope-fill"></i> Email</h5>
-        <p><a href="mailto:damian@example.com">damian@example.com</a></p>
-      </div>
-      <div>
-        <h5><i class="bi bi-envelope-fill"></i> Email secundario</h5>
-        <p><a href="mailto:damian_secundario@example.com">damian_secundario@example.com</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2023 Damian CV</p>
-    <a href="https://www.tiktok.com/@dark_slinger" target="_blank" aria-label="TikTok">
-      <!-- Icono TikTok SVG -->
-      <svg width="30" height="30" fill="currentColor" viewBox="0 0 448 512">
-        <path
-          d="M448,209.91c-15.75,5.68-32.71,9.29-50.47,10.25v74.56c0,38.15-30.86,69-69,69-40.66,0-73.68-35.64-69-77.88,3.35-31.47,30.49-57.54,62.52-57.54,8.71,0,17.3,2.29,24.77,6.61V118.77A139.92,139.92,0,0,1,265.86,109C218.28,103.25,176,142.43,176,191.79c0,38.29,26.94,69.84,63.63,75.22v20.18c0,37.7-30.63,68.34-68.31,68.34-37.56,0-67.94-30.31-67.94-67.94a67.15,67.15,0,0,1,.64-10.42c-44.49-9.26-78.38-49.94-78.38-97.55,0-55.27,44.83-100.1,100.1-100.1,43.29,0,79.89,29.16,94.44,68.54a69.19,69.19,0,0,0,12.28,3.94Z" />
-      </svg>
-    </a>
-    <a href="https://twitter.com/DarkSlingerNET" target="_blank" aria-label="Twitter">
-      <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
-    </a>
-  </footer>
-
-  <!-- Bootstrap JS (opcional) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
