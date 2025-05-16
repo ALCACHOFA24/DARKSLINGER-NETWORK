@@ -1,86 +1,178 @@
 <!DOCTYPE html>
-<html lang="es">
+<html data-bs-theme="light" lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Damian CV</title>
-  <style>
-    /* Fondo negro para toda la página */
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #000;
-      color: white;
-    }
+    <!-- Configuración básica de la página -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Damian CV</title>
 
-    /* Contenedor principal centrado */
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-      text-align: center;
-    }
+    <!-- Información para compartir en redes sociales (imagen y tipo de sitio) -->
+    <meta property="og:image" content="https://damiancv.es/assets/img/damia_ncv_359311851_818842706505114_3131233455938182627_n.jpg">
+    <meta property="og:type" content="website">
 
-    /* Estilo del nombre grande */
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 10px;
-      color: #ff3cac; /* rosa neón */
-    }
+    <!-- Datos estructurados para SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Damian CV",
+            "url": "https://damiancv.es"
+        }
+    </script>
 
-    /* Subtítulo */
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      color: #00f0ff; /* celeste neón */
-    }
+    <!-- Íconos para diferentes dispositivos y navegadores -->
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon/android-chrome-512x512.png">
 
-    /* Botones de redes sociales */
-    .socials a {
-      margin: 0 10px;
-      padding: 10px 20px;
-      background: linear-gradient(45deg, #ff3cac, #784ba0, #2b86c5);
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: transform 0.3s ease;
-    }
-
-    .socials a:hover {
-      transform: scale(1.1); /* efecto al pasar el mouse */
-    }
-
-    /* Sección de contacto */
-    .contact {
-      margin-top: 50px;
-      font-size: 1rem;
-      color: #ccc;
-    }
-  </style>
+    <!-- Estilos (Bootstrap y personalizados) -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/Responsive-Youtube-Embed.css">
+    <link rel="stylesheet" href="assets/css/Responsive-YouTube-Video-Section-Dark-Centered.css">
 </head>
+
 <body>
-  <div class="container">
-    <!-- Título principal -->
-    <h1>Damian CV</h1>
+    <!-- Barra de navegación principal -->
+    <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark" id="mainNav">
+        <div class="container">
+            <!-- Botón/logo principal -->
+            <a class="btn btn-primary shadow" href="index.html" style="background: rgb(255,0,0);">Damian CV</a>
 
-    <!-- Subtítulo -->
-    <h2>¡Creando contenido que vibra!</h2>
+            <!-- Botón para el menú en pantallas pequeñas -->
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- Botones de redes sociales -->
-    <div class="socials">
-      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-      <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+            <!-- Enlaces del menú -->
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/damia_ncv/">Instagram</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://x.com/Damiancv5Cv/">Twitter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@DAMIANCV8">Youtube</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://discord.gg/rsAwuCg6xK">Discord</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://vm.tiktok.com/ZM8CWXf7J">TikTok</a></li>
+                </ul>
+                <!-- Botón a la tienda -->
+                <a class="btn btn-primary shadow" href="https://my-store-e86371.creator-spring.com">Tienda</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section con fondo e introducción -->
+    <div class="d-flex flex-column justify-content-center align-items-center" style="background: linear-gradient(...), url('assets/img/...'); height: 500px;">
+        <div class="row">
+            <div class="col text-center">
+                <h1>Hola! Me llamo "Damian CV"</h1>
+                <p>👋-Hola! Me llamo "Damian CV", subo contenido intentando hacerlos reír con mi forma de ser.</p>
+            </div>
+        </div>
     </div>
 
-    <!-- Información de contacto -->
-    <div class="contact">
-      <p>Contacto: damian@email.com</p>
-    </div>
-  </div>
-</body>
-</html>
+    <!-- Header con imágenes en parallax -->
+    <header class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end;">
+                        <!-- Imágenes con efecto de parallax -->
+                        <div><img class="img-fluid" data-bss-parallax data-bss-parallax-speed="0.8" src="..."></div>
+                        <div><img class="img-fluid" data-bss-parallax data-bss-parallax-speed="0.4" src="..."></div>
+                        <div><img class="img-fluid" data-bss-parallax data-bss-parallax-speed="0.25" src="..."></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contador de suscriptores de YouTube -->
+    <section class="py-5">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <iframe src="https://livecounts.xyz/embed-customized/youtube-live-subscriber-count/..." style="width:300px; height:80px;"></iframe>
+            </div>
+        </div>
+
+        <!-- Video de YouTube incrustado -->
+        <div class="container text-center py-5">
+            <section class="clean-block clean-info dark">
+                <div class="container">
+                    <div class="videoWrapper">
+                        <iframe allowfullscreen src="https://www.youtube.com/embed/cqn-i-LhH9M" class="embed-responsive-item"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Sección con iframe de Instagram -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <iframe src="https://www.instagram.com/damia_ncv/embed/?theme=dark" width="550" height="700"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de la tienda -->
+    <section class="py-5">
+        <h1 class="text-center"><a href="https://my-store-e86371.creator-spring.com/">Productos de mi Tienda</a></h1>
+        <div class="container">
+            <div class="row text-center">
+                <a class="btn btn-primary shadow" href="https://my-store-e86371.creator-spring.com">Tienda</a>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- Tienda incrustada -->
+                    <iframe src="https://my-store-e86371.creator-spring.com/" style="width:100%; height:700px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="py-5">
+        <div class="container text-center">
+            <p class="fw-bold text-success">CONTACTOS</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: contacto por email -->
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div class="bs-icon-md bs-icon-circle" style="background: rgb(255,0,0);">
+                            <!-- Icono de sobre -->
+                            <svg class="bi bi-envelope" ...></svg>
+                        </div>
+                        <div class="px-2">
+                            <h6>Email</h6>
+                            <p><a href="mailto:correo@ejemplo.com">[email protected]</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna 2: otro email de contacto -->
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div class="bs-icon-md bs-icon-circle">
+                            <svg class="bi bi-envelope" ...></svg>
+                        </div>
+                        <div class="px-2">
+                            <h6>Email</h6>
+                            <p><a href="mailto:correo@ejemplo.com">[email protected]</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark">
+        <div class="container py-4">
+            <hr>
+            <div class="text-muted d-flex justify-
