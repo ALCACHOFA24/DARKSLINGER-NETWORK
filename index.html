@@ -1,33 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Damian CV – Inicio</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Damian CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Hola, soy Damián</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-        <li><a href="redes.html">Redes Sociales</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+
+  <!-- Botón hamburguesa -->
+  <button id="hamburguesa" class="hamburguesa">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Menú lateral -->
+  <div id="menu-overlay" class="overlay">
+    <nav class="menu">
+      <a href="#hero">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#redes">Redes</a>
+      <a href="#contacto">Contacto</a>
+      <a href="actualizaciones.html">Actualizaciones 🔒</a>
     </nav>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <h1>Damian CV</h1>
+    <p>Gaming. Desarrollo. Comunidad.</p>
+    <a href="#redes" class="btn">Sígueme</a>
   </header>
 
-  <main>
-    <section id="introduccion">
-      <!-- Aquí va contenido que tomes de damiancv.es -->
-      <p>Aquí puedes introducir tu presentación, tus valores, logros, objetivos…</p>
-    </section>
-  </main>
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="seccion">
+    <h2>Sobre mí</h2>
+    <p>Soy creador de contenido, programador y desarrollador de servidores. Me gusta compartir mis proyectos, recursos útiles y ayudar a otros a crecer.</p>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="seccion">
+    <h2>Proyectos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Electrum CDMX</h3>
+        <p>Servidor Minecraft personalizado. Comunidad activa y eventos únicos.</p>
+        <a href="#">Ver más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos -->
+  <section id="recursos" class="seccion">
+    <h2>Recursos</h2>
+    <ul>
+      <li><a href="#">Modpack Minecraft</a></li>
+      <li><a href="#">Tutorial de conexión</a></li>
+      <li><a href="#">GitHub con herramientas</a></li>
+    </ul>
+  </section>
+
+  <!-- Redes Sociales -->
+  <section id="redes" class="seccion redes">
+    <h2>Redes Sociales</h2>
+    <div class="iconos">
+      <a href="https://www.youtube.com/@damiancv" target="_blank"><i class="ri-youtube-fill"></i></a>
+      <a href="https://github.com/damiancv" target="_blank"><i class="ri-github-fill"></i></a>
+      <a href="https://www.instagram.com/damiancv" target="_blank"><i class="ri-instagram-fill"></i></a>
+    </div>
+    <iframe src="https://livecounts.xyz/embed/youtube-live-subscriber-counter/@damiancv"
+      style="width:100%; max-width:400px; height:180px; border:none; margin-top:2em;">
+    </iframe>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="seccion">
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo" required />
+      <textarea name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>O escríbeme a: <a href="mailto:contacto@damiancv.es">contacto@damiancv.es</a></p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Damián CV</p>
+    <p>&copy; 2025 Damian CV. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
-</html>
+                                                                                       </html>
+                                                                                       
