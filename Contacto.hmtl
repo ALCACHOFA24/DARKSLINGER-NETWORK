@@ -1,6 +1,12 @@
-<form action="https://formspree.io/f/...." method="POST">
-  <label>Nombre: <input type="text" name="name" required></label>
-  <label>Email: <input type="email" name="email" required></label>
-  <label>Mensaje: <textarea name="message" required></textarea></label>
-  <button type="submit">Enviar</button>
-</form>
+<main>
+  <h1>Contacto</h1>
+
+  <form action="https://formspree.io/f/xxxxx" method="POST">
+    <label>Nombre:<br><input type="text" name="nombre" required></label><br>
+    <label>Email:<br><input type="email" name="email" required></label><br>
+    <label>Mensaje:<br><textarea name="mensaje" rows="5" required></textarea></label><br>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p>O escríbeme directamente a: <a href="mailto:damian@example.com">damian@example.com</a></p>
+</main>
