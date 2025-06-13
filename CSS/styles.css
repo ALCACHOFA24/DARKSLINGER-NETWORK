@@ -1,1 +1,7 @@
-
+body { font-family: sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+header, footer { background: #222; color: #fff; padding: 1rem; }
+nav ul { list-style: none; padding: 0; }
+nav li { display: inline-block; margin-right: 1rem; }
+a { color: #0066cc; text-decoration: none; }
+main { padding: 1rem; }
+section { margin-bottom: 2rem; }
